@@ -1,0 +1,141 @@
+# User Status
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/benchmark.sh
+mv ./benchmark.sh /usr/local/bin/benchmark.sh
+chmod +x /usr/local/bin/benchmark.sh
+
+# instal Buat Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/speedtest_cli.py
+mv ./speedtest_cli.py /usr/bin/speedtest_cli.py
+chmod +x /usr/bin/speedtest_cli.py
+
+# instal Generate Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/ps_mem.py
+mv ./ps_mem.py /usr/bin/ps_mem.py
+chmod +x /usr/bin/ps_mem.py
+
+# instal Generate Akun Trial
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/dropmon.sh
+mv ./dropmon.sh /usr/bin/dropmon.sh
+chmod +x /usr/bin/dropmon.sh
+
+# instal  Ganti Password Akun SSH/VPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-active-list.sh
+mv ./user-active-list.sh /usr/bin/user-active-list.sh
+chmod +x /usr/bin/user-active-list.sh
+
+# instal Generate Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-add.sh
+mv ./user-add.sh /usr/bin/user-add.sh
+chmod +x /usr/bin/user-add.sh
+# instal Hapus Akun SSH/OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-add-pptp.sh
+mv ./user-add-pptp.sh /usr/bin/user-add-pptp.sh
+chmod +x /usr/bin/user-add-pptp.sh
+
+# instal Cek Login Dropbear, OpenSSH & OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-del.sh
+mv ./user-del.sh /usr/bin/user-del.sh
+chmod +x /usr/bin/user-del.sh
+
+# instal Auto Limit Multi Login
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/disable-user-expire.sh
+mv ./disable-user-expire.sh /usr/bin/disable-user-expire.sh
+chmod +x /usr/bin/disable-user-expire.sh
+
+# instal Auto Limit Script Multi Login
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/delete-user-expire.sh
+mv ./delete-user-expire.sh /usr/local/bin/delete-user-expire.sh
+chmod +x /usr/local/bin/delete-user-expire.sh
+
+# instal Melihat detail user SSH & OpenVPN 
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/banned-user.sh
+mv ./banned-user.sh /usr/bin/banned-user.sh
+chmod +x /usr/bin/banned-user.sh
+
+# instal Delete Akun Expire
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/unbanned-user.sh
+mv ./unbanned-user.sh /usr/bin/unbanned-user.sh
+chmod +x /usr/bin/unbanned-user.sh
+
+# instal  Kill Multi Login
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/script/user-expire-list.sh
+mv ./user-expire-list.sh /usr/bin/user-expire-list.sh
+chmod +x /usr/bin/user-expire-list.sh
+
+# instal  Kill Multi Login2
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-gen.sh
+mv ./user-gen.sh /usr/bin/user-gen.sh
+chmod +x /usr/bin/user-gen.sh
+
+# instal Auto Banned Akun
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/userlimit.sh
+mv ./userlimit.sh /usr/bin/userlimit.sh
+chmod +x /usr/bin/userlimit.sh
+
+# instal Unbanned Akun
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/userlimitssh.sh
+mv ./userlimitssh.sh /usr/bin/userlimitssh.sh
+chmod +x /usr/bin/userlimitssh.sh
+
+# instal Mengunci Akun SSH & OpenVPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-list.sh
+mv ./user-list.sh /usr/bin/user-list.sh
+chmod +x /usr/bin/user-list.sh
+
+# instal Membuka user SSH & OpenVPN yang terkunci
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-login.sh
+mv ./user-login.sh /usr/bin/user-login.sh
+chmod +x /usr/bin/user-login.sh
+
+# instal Melihat daftar user yang terkick oleh perintah user-limit
+cd
+wget https://raw.githubusercontent.com/ehomecore91/setup-code/master/loglimit.sh
+mv ./loglimit.sh /usr/bin/loglimit.sh
+chmod +x /usr/bin/loglimit.sh
+
+# instal Melihat daftar user yang terbanned oleh perintah user-ban
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-pass.sh
+mv ./user-pass.sh /usr/bin/user-pass.sh
+chmod +x /usr/bin/user-pass.sh
+
+# instal Buat Akun PPTP VPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/user-renew.sh
+mv ./user-renew.sh /usr/bin/user-renew.sh
+chmod +x /usr/bin/user-renew.sh
+# instal Hapus Akun PPTP VPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/clearcache.sh
+mv ./clearcache.sh /usr/bin/clearcache.sh
+chmod +x /usr/bin/clearcache.sh
+
+# instal Lihat Detail Akun PPTP VPN
+cd
+wget https://raw.githubusercontent.com/redhatz91/989/master/menu.sh
+mv ./menu.sh /usr/bin/menu.sh
+chmod +x /usr/bin/menu.sh
+
+cd ~/
+rm -f /root/update.sh
+
+echo""
+menu
