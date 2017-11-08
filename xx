@@ -23,11 +23,7 @@ echo "MULA SETUP"
 clear
 
 
-#vps="dg-network";
-vps="dg-network";
 
-#if [[ $vps = "dg-network" ]]; then
-	#source="http://"
 #else
 	source="https://raw.githubusercontent.com/DG-Network"
 #fi
