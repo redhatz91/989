@@ -36,7 +36,7 @@ echo "-----------------------------------"
 echo ""
 echo "------------------------------------"
 
-echo "      DEVELOPED BY VPN989"
+echo "      DEVELOPED BY AnonymousVpn8"
 echo "------------------------------------"
 echo ""
 
