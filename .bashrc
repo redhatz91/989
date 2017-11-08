@@ -121,12 +121,12 @@ clear
 echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
-echo "      --[         SELAMAT DATANG  DI REDHATZ005         ]--"| boxes -d boy | lolcat
+echo "      --[         SELAMAT DATANG  DI AnonymousVpn8         ]--"| boxes -d boy | lolcat
 echo "         ====================================================="| lolcat
 echo "         #           WhatsApp     : - - - - - -             #"| lolcat
-echo "         #           Telegram     : @Chandra989             #"| lolcat
-echo "         #           GROUP        : T.me/REDHATZ005         #"| lolcat
-echo "         #           Channel      : T.me/REDHATZ005             #"| lolcat
+echo "         #           Telegram     : @AnonymousVpn8          #"| lolcat
+echo "         #           GROUP        : T.me/AnonymousVpn8      #"| lolcat
+echo "         #           Channel      : @AnonymousvpnTeam       #"| lolcat
 echo "         #--------------------------------------------------#"| lolcat
 echo "         #      Sila taip [menu] and ENTER untuk options    #"| lolcat
 echo "         #--------------------------------------------------#"| lolcat
