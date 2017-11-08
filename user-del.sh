@@ -9,7 +9,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 echo "-------- DELETE ACCOUNT ---------"
 
-	echo "          DEVELOPED BY VPN989            "
+	echo "          DEVELOPED BY AnonymousVpn8            "
 echo ""
 
 # begin of user-list
