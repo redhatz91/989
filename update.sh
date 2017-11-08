@@ -2,6 +2,7 @@
 
 # download script
 cd
+wget -O /usr/bin/bannermenu "https://raw.githubusercontent.com/redhatz91/989/master/bannermenu"
 wget -O /usr/bin/benchmark "https://raw.githubusercontent.com/redhatz91/989/master/benchmark.sh"
 wget -O /usr/bin/speedtest  "https://raw.githubusercontent.com/redhatz91/989/master/speedtest_cli.py"
 wget -O /usr/bin/ps-mem "https://raw.githubusercontent.com/redhatz91/989/master/ps_mem.py"
@@ -42,6 +43,7 @@ echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "*/30 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 
 cd
+chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/benchmark
 chmod +x /usr/bin/speedtest
 chmod +x /usr/bin/ps-mem
